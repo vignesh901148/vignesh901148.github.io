@@ -3304,3 +3304,154 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.progress-circle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: inherit;
+  border-right-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: rotate(0deg);
+  transform-origin: center;
+  animation: progress-animation 2s ease-out forwards;
+}
+
+.progress-circle .logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+}
+
+.p75::after {
+  border-top-color: #ff4b00;
+  border-right-color: #ff4b00;
+  animation: progress-animation-75 2s ease-out forwards;
+}
+
+.p80.green::after {
+  border-top-color: #00aced;
+  border-right-color: #00aced;
+  animation: progress-animation-80-green 2s ease-out forwards;
+}
+
+.p100.red::after {
+  border-top-color: #c32148;
+  border-right-color: #c32148;
+  animation: progress-animation-100-red 2s ease-out forwards;
+}
+
+.p80.orange::after {
+  border-top-color: #6244C5;
+  border-right-color: #6244C5;
+  animation: progress-animation-80 2s ease-out forwards;
+}
+
+.p81::after {
+  border-top-color: #4aa61f;
+  border-right-color: #4aa61f;
+  animation: progress-animation-81 2s ease-out forwards;
+}
+.p82::after {
+  border-top-color: #FFD700;
+  border-right-color: #FFD700;
+  animation: progress-animation-81 2s ease-out forwards;
+}
+.p83::after {
+  border-top-color: #0000FF;
+  border-right-color: #0000FF;
+  animation: progress-animation-81 2s ease-out forwards;
+}
+.p84::after {
+  border-top-color: #7FFFD4;
+  border-right-color: #7FFFD4;
+  animation: progress-animation-81 2s ease-out forwards;
+}
+.p85::after {
+  border-top-color: #D2691E;
+  border-right-color: #D2691E;
+  animation: progress-animation-81 2s ease-out forwards;
+}
+
+@keyframes progress-animation-75 {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(270deg);
+  }
+}
+
+@keyframes progress-animation-80-green {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(288deg);
+  }
+}
+
+@keyframes progress-animation-100-red {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes progress-animation-80 {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(288deg);
+  }
+}
+
+@keyframes progress-animation-81 {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(291.6deg);
+  }
+}
+
+.source-code {
+  margin-top: 50px;
+  font-size: 18px;
+  color: #555555;
+}
+.skills-img{
+  margin-top: 15px !important;
+  /* width: 56% !important; */
+}
